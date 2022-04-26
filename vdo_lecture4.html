@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vdo.css">
+
+    <title>Video Lecture</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="videos">
+            <video class="active" src="videos/vdo17.mp4" muted></video>
+            <video src="videos/vdo18.mp4" muted></video>
+            <video src="videos/vdo19.mp4" muted></video>
+            <video src="videos/vdo20.mp4" muted></video>
+        </div>
+        <div class="main-video">
+            <video src="videos/vdo17.mp4" muted controls autoplay></video>
+        </div>
+    </div><br><br>
+
+
+    <!-- jquery cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $('.videos video').click(function() {
+
+                $(this).addClass('active').siblings().removeClass('active');
+
+                var src = $(this).attr('src');
+                $('.main-video video').attr('src', src);
+            });
+        });
+    </script>
+    <a href="quize4.html"><button type="button" style="position: absolute; top: 85%;padding: 10px;right: 220px;font-size: larger;font-weight: bold;">Take the Quize__</button></a>
+
+</body>
+
+</html>
+
+</html>
